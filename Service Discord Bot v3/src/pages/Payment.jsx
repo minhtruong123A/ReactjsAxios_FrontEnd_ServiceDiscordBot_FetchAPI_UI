@@ -2,10 +2,22 @@ import FrameComponent3 from "../components/FrameComponent3";
 import ActionDivider from "../components/ActionDivider";
 import Footer from "../components/Footer";
 import Header1 from "../components/Header1";
+import { useCallback, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./Payment.css";
 import Copyright from "../components/Copyright";
 
 const Payment = () => {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState(localStorage.getItem("username"));
+
+  useEffect(() => {
+    if (!username) {
+      navigate("/home");
+    }
+  }, [username, navigate]); 
+
   return (
     <div className="payment">
       <Header1 />

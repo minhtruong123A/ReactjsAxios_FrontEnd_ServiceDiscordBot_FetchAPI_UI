@@ -6,6 +6,7 @@
   display: none;
   max-width: 100%;
 }
+
 .exe-discord-bot-logo1 {
   height: 112px;
   width: 112px;
@@ -14,14 +15,17 @@
   object-fit: cover;
   z-index: 1;
 }
+
 .service-discord {
   margin: 0;
+  color: white;
   position: relative;
   font-size: inherit;
   font-weight: 900;
   font-family: inherit;
   z-index: 1;
 }
+
 .image-container {
   flex: 1;
   display: flex;
@@ -32,11 +36,13 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .left-header {
   flex-direction: row;
   gap: var(--gap-2xs);
   max-width: 100%;
 }
+
 .component-1-parent,
 .left-header,
 .login-component {
@@ -44,16 +50,19 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .login-component {
   flex: 1;
   flex-direction: column;
   padding: var(--padding-12xs) 0 0;
 }
+
 .component-1-parent {
   align-self: stretch;
   flex-direction: row;
   gap: var(--gap-11xl);
 }
+
 .header,
 .login-container {
   display: flex;
@@ -61,33 +70,37 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .login-container {
   width: 477px;
   flex-direction: column;
   justify-content: flex-start;
   padding: var(--padding-12xl) 0 0;
 }
+
 .header {
   align-self: stretch;
   background-color: var(--color-midnightblue);
   flex-direction: row;
   justify-content: space-between;
-  padding: var(--padding-8xl) var(--padding-2xl) var(--padding-9xl)
-    var(--padding-43xl);
+  padding: var(--padding-8xl) var(--padding-2xl) var(--padding-9xl) var(--padding-43xl);
   gap: var(--gap-xl);
   text-align: left;
   font-size: var(--font-size-29xl);
   color: var(--color-white);
   font-family: var(--font-merriweather);
 }
-.welcome-user{
+
+.welcome-user {
   font-size: var(--font-size-xl);
 }
+
 .welcome-user {
   align-self: stretch;
   height: 49px;
   z-index: 1;
 }
+
 @media screen and (max-width: 450px) {
   .welcome-user {
     padding-left: var(--padding-xl);
@@ -95,13 +108,23 @@
     box-sizing: border-box;
   }
 }
-.welcome-message{
+
+.welcome-message {
   width: 209px;
   z-index: 1;
 }
+
 @media screen and (max-width: 800px) {
   .header {
     padding-left: var(--padding-12xl);
     box-sizing: border-box;
   }
+}
+
+.avatar-icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
 }

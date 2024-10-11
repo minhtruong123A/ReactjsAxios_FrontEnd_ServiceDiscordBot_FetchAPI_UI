@@ -22,7 +22,6 @@ const Content = ({ className = "" }) => {
                     <h1 className="monthly">Monthly</h1>
                   </div>
                   <b className="sale-499-monthly-container">
-                    <p className="sale">SALE</p>
                     <p className="sale">
                       <span>{`0.99$ `}</span>
                       <span className="monthly2">/monthly</span>
@@ -32,8 +31,9 @@ const Content = ({ className = "" }) => {
               </div>
               <div className="data-storage-calculate-container">
                 <ul className="data-storage-calculate-statis">
-                  <li className="data-storage">Data storage</li>
-                  <li>Calculate statistics</li>
+                  <span className="data-storage">Data storage</span>
+                  <br></br>
+                  <span>Calculate statistics</span>
                 </ul>
               </div>
             </div>

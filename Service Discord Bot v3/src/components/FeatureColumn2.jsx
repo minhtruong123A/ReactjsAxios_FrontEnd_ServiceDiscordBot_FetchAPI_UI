@@ -6,7 +6,7 @@ import "./FeatureColumn2.css";
 
 const FeatureColumn2 = ({ className = "" }) => {
   return (
-    <div className={`notifications ${className}`}>
+    <div className={`notifications2 ${className}`}>
       <div className="feature-card1">
         <div className="feature-content1">
           <div className="feature-header">
@@ -22,7 +22,7 @@ const FeatureColumn2 = ({ className = "" }) => {
         </div>
         <div className="feature-description">
           <div className="customization-notification-parent">
-            <h3 className="customization-notification">
+            <h3 className="customization-notification2">
               Customization Notification
             </h3>
             <div className="users-can-configure">
@@ -47,7 +47,7 @@ const FeatureColumn2 = ({ className = "" }) => {
       <div className="feature-column3">
         <div className="feature-card2">
           <div className="language-info">
-            <h3 className="multiple-languages-support">
+            <h3 className="multiple-languages-support2">
               Multiple Languages Support
             </h3>
             <div className="users-can-configure">
@@ -72,7 +72,7 @@ const FeatureColumn2 = ({ className = "" }) => {
               >
                 Coming soon
               </Button>
-     
+
             </div>
           </div>
         </div>

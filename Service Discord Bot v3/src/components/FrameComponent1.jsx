@@ -38,7 +38,7 @@ const FrameComponent1 = ({ className = "" }) => {
         </div>
         <div className="document-description">
           <div className="description-container">
-            <h3 className="document-coding">Document - Coding Resources</h3>
+            <h3 className="document-coding2">Document - Coding Resources</h3>
             <div className="provides-a-curated">
               Provides a curated collection of coding resources, tutorials, and
               best practices. It serves as a knowledge hub for developers,

@@ -8,18 +8,21 @@
   object-fit: cover;
   z-index: 1;
 }
+
 .feature-list,
 .features {
   display: flex;
   align-items: flex-start;
   max-width: 100%;
 }
+
 .feature-list {
   flex: 1;
   flex-direction: column;
   justify-content: flex-start;
   gap: 200.5px;
 }
+
 .features {
   width: 1407px;
   flex-direction: row;
@@ -27,6 +30,7 @@
   padding: 0 var(--padding-18xl) 293px;
   box-sizing: border-box;
 }
+
 .home {
   width: 100%;
   position: relative;
@@ -40,24 +44,29 @@
   line-height: normal;
   letter-spacing: normal;
 }
+
 @media screen and (max-width: 1300px) {
   .feature-list {
     gap: 100px;
   }
+
   .features {
     padding-bottom: 123px;
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 800px) {
   .feature-list {
     gap: var(--gap-31xl);
   }
+
   .features {
     padding-bottom: 80px;
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 450px) {
   .feature-list {
     gap: var(--gap-6xl);

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
+import { TextField, InputAdornment, Icon, IconButton, colors } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import LoginButtonContainer from "./LoginButtonContainer";
 import PropTypes from "prop-types";
@@ -20,11 +20,11 @@ const Window1 = ({ className = "" }) => {
   const onLogoClick = useCallback(() => {
     navigate("/home");
   }, [navigate]);
-  
+
   return (
     <section className={`window ${className}`}>
       <div className="window-child" />
-      <div className="content"onClick={onLogoClick}>
+      <div className="content" onClick={onLogoClick}>
         <img
           className="exe-discord-bot-logo"
           loading="lazy"
@@ -87,6 +87,17 @@ const Window1 = ({ className = "" }) => {
             {errorMessage && <div className="error-message">{errorMessage}</div>}
           </div>
         </div>
+        <p style={{
+          color: 'yellow',                // Yellow color for the rest of the text
+          backgroundColor: 'rgba(255, 0, 0, 0.1)', // Light red background
+          lineHeight: '1.2',              // Compact line height
+          margin: '0',                    // Remove default margin
+          padding: '10px',                // Padding for better spacing
+          borderRadius: '5px',            // Rounded corners
+          fontWeight: 'bold'              // Bold text
+        }}>
+          <span style={{ color: 'white' }}>⚠️NOTE⚠️:</span> discord user (ex [@janedoe] &gt; janedoe in register page) must be accurate, wrong user made it unable to work correctly
+        </p>
         <LoginButtonContainer
           frame2="Register"
           propWidth="282.8px"
@@ -95,13 +106,14 @@ const Window1 = ({ className = "" }) => {
           onRegisterTextClick={onLoginTextClick}
           propDisplay="unset"
           propMinWidth="unset"
-          username = {username}
-          password = {password}
-          confirmPassword = {confirmPassword}
-          discord_userid = {discord_userid}
+          username={username}
+          password={password}
+          confirmPassword={confirmPassword}
+          discord_userid={discord_userid}
           isLogin={false}
         />
       </form>
+
     </section>
   );
 };

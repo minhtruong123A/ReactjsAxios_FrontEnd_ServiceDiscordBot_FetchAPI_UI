@@ -10,6 +10,7 @@ import Payment from "./pages/Payment";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import PremiumTrial from "./pages/PremiumTrial";
+import ViewTask from "./pages/ViewTask";
 
 function App() {
   const action = useNavigationType();
@@ -51,6 +52,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/View-task":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -75,6 +80,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/premium-trial" element={<PremiumTrial />} />
+      <Route path="/View-task" element={<ViewTask />} />
     </Routes>
   );
 }

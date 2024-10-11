@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Component5 from "./Component5";
 import Component4 from "./Component4";
 import axios from "axios";
@@ -24,10 +24,10 @@ const Header = ({ className = "" }) => {
       const access_token = localStorage.getItem("access_token");
       const refresh_token = localStorage.getItem("refresh_token");
       if (refresh_token && storedUsername && storedPassword) {
-        axios.post("http://localhost:8000/api/account/login", { 
+        axios.post("http://localhost:8000/api/account/login", {
           username: storedUsername,
           password: storedPassword,
-         })
+        })
           .then(response => {
             const { access_token, refresh_token } = response.data;
             localStorage.setItem("access_token", access_token);
@@ -54,6 +54,10 @@ const Header = ({ className = "" }) => {
     navigate("/home");
   };
 
+  const onLogoClick = useCallback(() => {
+    navigate("/View-task");
+  }, [navigate]);
+
   return (
     <header className={`header ${className}`}>
       <div className="header-child" />
@@ -74,7 +78,7 @@ const Header = ({ className = "" }) => {
           <div className="login-component">
             {isLoggedIn ? (
               <div className="welcome-message">
-                <Button
+                {/* <Button
                   className="logout-button"
                   disableElevation
                   variant="contained"
@@ -90,7 +94,15 @@ const Header = ({ className = "" }) => {
                   onClick={handleLogout}
                 >
                   Logout
-                </Button>
+                </Button> */}
+                <div className="logo" onClick={onLogoClick}>
+                  <img
+                    className="avatar-icon"
+                    loading="lazy"
+                    alt=""
+                    src="/avatar@2x.png"
+                  />
+                </div>
                 {/* <span className="welcome-user">Welcome, {username}</span> */}
               </div>
             ) : (

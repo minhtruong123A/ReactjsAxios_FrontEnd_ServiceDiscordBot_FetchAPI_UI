@@ -23,7 +23,7 @@ const Home = () => {
         src="/exe-mascot1@2x.png"
       />
       <Header />
-      <FrameComponent onAboutServiceClick={scrollToFeatureColumn}/>
+      <FrameComponent onAboutServiceClick={scrollToFeatureColumn} />
       <section className="features">
         <div className="feature-list">
           <div ref={featureColumnRef}>

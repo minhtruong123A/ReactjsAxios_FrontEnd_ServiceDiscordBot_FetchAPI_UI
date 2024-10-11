@@ -47,7 +47,7 @@ const FeatureColumn = ({ className = "" }) => {
         </div>
         <div className="support-description">
           <div className="support-content">
-            <h3 className="project-management-support">
+            <h3 className="project-management-support2">
               Project Management Support System
             </h3>
             <div className="the-bot-monitors">
@@ -62,7 +62,7 @@ const FeatureColumn = ({ className = "" }) => {
               propMinWidth="166px"
               propAlignSelf="unset"
             />
- 
+
           </div>
         </div>
       </div>

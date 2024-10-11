@@ -1,0 +1,403 @@
+.task-list {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  width: 1000px;
+  /* Adjust width for better layout */
+  margin: auto;
+  /* Center the task list */
+}
+
+.loader {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.server-section {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.server-tag {
+  display: inline-block;
+  background-color: #007bff;
+  /* Tag color */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.task-items {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 100%;
+  /* Ensure the item takes full width available */
+}
+
+.task-title {
+  margin: 0;
+  /* No margin for title */
+}
+
+.task-desc {
+  color: #555;
+  margin: 5px 0 10px;
+  /* Space between description and other details */
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+  /* Space between task description and info */
+  flex-wrap: wrap;
+  /* Allow wrapping for better spacing */
+}
+
+.task-dates {
+  display: flex;
+  /* Align Start and End on the same line */
+  justify-content: space-between;
+  /* Space between Start and End */
+  margin: 10px 0;
+  /* Space below the date info */
+  width: 100%;
+  /* Make it full width for better separation */
+}
+
+.task-participants {
+  margin-top: 10px;
+  /* Add more space above participants */
+  flex-basis: 100%;
+  /* Ensure participants are on a new line */
+}
+
+.task-item:hover {
+  background-color: #e6f7ff;
+  border-color: #91d5ff;
+}
+
+.task-item.completed {
+  border-left: 4px solid green;
+  background-color: #e0f7e0;
+}
+
+h2 {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #444;
+  font-size: 22px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.completed-tag {
+  display: inline-block;
+  background-color: #28a745;
+  /* Green color for completed */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  max-width: 90px;
+  margin-top: 10px;
+  /* Space above the tag */
+  font-size: 14px;
+  /* Adjust font size */
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 100%;
+  /* Ensure the item takes full width available */
+}
+
+.task-header {
+  display: flex;
+  /* Make the header a flex container */
+  justify-content: space-between;
+  /* Space between completed tag and title */
+  align-items: center;
+  /* Center items vertically */
+}
+
+.completed-tag {
+  display: inline-block;
+  background-color: #28a745;
+  /* Green color for completed */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  /* Adjust font size */
+  margin-right: 10px;
+  /* Space between tag and title */
+}
+
+.profile-section {
+  padding: 10px;
+  background-color: #e0f7fa;
+  /* Light blue background */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  /* Space below the profile section */
+  text-align: center;
+  /* Center the text */
+}
+
+.profile-section h2 {
+  color: #00796b;
+  /* Darker shade of blue */
+  margin: 0;
+  /* Remove default margin */
+}
+
+.profile-section {
+  padding: 10px;
+  background-color: #e0f7fa;
+  /* Light blue background */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  /* Space below the profile section */
+  text-align: center;
+  /* Center the text */
+}
+
+.profile-section h2 {
+  color: #00796b;
+  /* Darker shade of blue */
+  margin: 0;
+  /* Remove default margin */
+}
+
+.notifications {
+  height: auto;
+  /* Allow the height to adjust based on content */
+  max-height: 70px;
+  /* Set a maximum height */
+  overflow-y: auto;
+  /* Allow scrolling if content exceeds max height */
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  /* Optional: background color for visibility */
+  border: 1px solid #ddd;
+  /* Optional: border for definition */
+  padding: 10px;
+  /* Optional: add some padding */
+  margin: 10px 0;
+  /* Space out from other elements */
+}
+
+.notification-item {
+  margin-bottom: 5px;
+  /* Space between notification items */
+  color: #333;
+  /* Optional: text color */
+}
+
+
+.notification-item:hover {
+  background-color: #f0f8ff;
+  /* Màu nền thay đổi khi hover */
+}
+
+.settings-section {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  /* Màu nền sáng hơn */
+  border-radius: 8px;
+  /* Bo góc */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Bóng nhẹ */
+  display: flex;
+  align-items: center;
+  /* Canh giữa theo chiều dọc */
+}
+
+.settings-section label {
+  margin-right: 10px;
+  font-weight: bold;
+  /* Làm đậm chữ */
+  color: #333;
+  /* Màu chữ tối */
+}
+
+.settings-section select {
+  padding: 10px;
+  /* Padding cho select */
+  border: 1px solid #ced4da;
+  /* Đường viền */
+  border-radius: 4px;
+  /* Bo góc */
+  font-size: 16px;
+  /* Kích thước chữ */
+  transition: border-color 0.3s;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.settings-section select:focus {
+  border-color: #007bff;
+  /* Màu đường viền khi focus */
+  outline: none;
+  /* Ẩn outline mặc định */
+}
+
+.notification-item {
+  background-color: #fff3cd;
+  /* Màu nền cho thông báo */
+  border-left: 4px solid #ffc107;
+  /* Đường viền bên trái */
+  padding: 10px;
+  /* Padding cho thông báo */
+  margin: 10px 0;
+  /* Khoảng cách giữa các thông báo */
+  border-radius: 4px;
+  /* Bo góc cho thông báo */
+  color: #856404;
+  /* Màu chữ */
+}
+
+.popup {
+  position: fixed;
+  /* Đặt pop-up ở vị trí cố định */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Nền tối */
+  display: flex;
+  justify-content: center;
+  /* Canh giữa */
+  align-items: center;
+  /* Canh giữa */
+  z-index: 1000;
+  /* Đặt phía trên cùng */
+}
+
+.popup-content {
+  background: #fff;
+  /* Nền trắng cho pop-up */
+  padding: 20px;
+  /* Padding cho nội dung */
+  border-radius: 8px;
+  /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Bóng cho pop-up */
+  max-width: 400px;
+  /* Chiều rộng tối đa */
+  width: 100%;
+  /* Chiều rộng tự động */
+  text-align: center;
+  /* Canh giữa văn bản */
+}
+
+.popup-content h3 {
+  margin-bottom: 15px;
+  /* Khoảng cách giữa tiêu đề và nội dung */
+  color: #333;
+  /* Màu chữ tiêu đề */
+}
+
+.popup-content button {
+  background-color: #007bff;
+  /* Màu nền nút */
+  color: #fff;
+  /* Màu chữ nút */
+  border: none;
+  /* Ẩn đường viền */
+  padding: 10px 20px;
+  /* Padding cho nút */
+  border-radius: 5px;
+  /* Bo góc */
+  cursor: pointer;
+  /* Con trỏ chuột khi hover */
+  transition: background-color 0.3s;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+  /* Màu nền khi hover */
+}
+
+.task-item.expired {
+  background-color: #ffcccc;
+  /* Light red background for overdue tasks */
+  color: #a94442;
+  /* Dark red text for better contrast */
+  border-left: 5px solid #d9534f;
+  /* Optional: Add a red border to emphasize */
+}
+
+.task-item.expired .task-title::before {
+  content: "⚠️ ";
+}

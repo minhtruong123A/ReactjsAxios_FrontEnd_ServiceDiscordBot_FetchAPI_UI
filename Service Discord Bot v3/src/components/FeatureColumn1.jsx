@@ -8,7 +8,7 @@ const FeatureColumn1 = ({ className = "" }) => {
     <div className={`feature-column1 ${className}`}>
       <div className="code-details">
         <div className="feature-content">
-          <h3 className="code-management">Code Management</h3>
+          <h3 className="code-management2">Code Management</h3>
           <div className="code-paragraph">
             <div className="the-bot-performs">
               The bot performs automated code quality checks, identifies
@@ -21,7 +21,7 @@ const FeatureColumn1 = ({ className = "" }) => {
                 propMinWidth="166px"
                 propAlignSelf="unset"
               />
-   
+
             </div>
           </div>
         </div>
